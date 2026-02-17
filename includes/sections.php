@@ -6,12 +6,6 @@
         class="section<?= ( $section[ 'bg' ] ) ? ' section--bg' : '' ?>"
         <?= ( $section[ 'bg' ] ) ? 'style="background-image:url(' . $section[ 'bg' ] . ')"' : '' ?>
     >
-        <?php if ( $section[ 'imagem' ] ) : ?>
-            <figure class="the_post_thumbnail">
-                <img src="<?= wp_get_attachment_image_url( $section[ 'imagem' ],'url') ?>">
-            </figure>
-        <?php endif ?>
-    
         <article class="max680">
             <?php if ( $section[ 'titulo' ] ) : ?>
                 <h2 id="<?= sanitize_title( $section[ 'titulo' ] ) ?>--anchor"  class="the_title">
@@ -40,6 +34,12 @@
 				</div>
             <?php endif; ?>
         </article>
+	
+		<?php if ( $section[ 'imagem' ] ) : ?>
+            <figure class="the_post_thumbnail">
+                <img src="<?= wp_get_attachment_image_url( $section[ 'imagem' ],'url') ?>">
+            </figure>
+        <?php endif ?>
     </section>
 
 <?php endforeach; ?>
