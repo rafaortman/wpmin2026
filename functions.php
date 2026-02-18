@@ -65,3 +65,17 @@
 	
 	add_filter('big_image_size_threshold', fn() => 1920);
 
+	function custom_login_logo() {
+		?>
+			<style>
+				.login h1 a {
+					background-image: url() !important;
+					background-size: contain !important;
+					cursor: default;
+					width: unset !important;
+				}
+			</style>
+		<?php
+	}
+	add_action('login_enqueue_scripts', 'custom_login_logo');
+
