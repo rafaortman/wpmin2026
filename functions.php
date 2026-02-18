@@ -6,7 +6,6 @@
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails', ['post']);
 		add_post_type_support('page', 'page-attributes');
-        register_nav_menu('menu','menu');
     }
     add_action('after_setup_theme','theme_setup');
 
