@@ -1,3 +1,5 @@
+<!-- footer.php -->
+
 <?php $site_footer = carbon_get_theme_option( 'site_footer' ); ?>
 
 <footer id="site_footer" class="tac">
