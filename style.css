@@ -1,11 +1,22 @@
 /*
     Theme Name: wpmin2026
-    Author: RafaOrtmanMillan
+    Author: Refinaria Design
     Version: 1.0
+
+    SUMÁRIO
+    =====================
+    [1] VARS
+    [2] DEFAULT
+    [3] UTILITIES
+    [4] HEADER
+    [5] FRONTPAGE
+    [6] INDEX
+    [7] FOOTER
+    =====================
 */
 
 /* =====================
-   VARS
+   [1] VARS
 ===================== */
 :root {
     --marinho: #132F55;
@@ -14,7 +25,7 @@
 }
 
 /* =====================
-   DEFAULT
+   [2] DEFAULT
 ===================== */
 *,
 *::after,
@@ -118,7 +129,7 @@ h3 {
 }
 
 /* =====================
-   UTILITIES
+   [3] UTILITIES
 ===================== */
 
 #wpadminbar {
@@ -323,7 +334,7 @@ h3 {
 }
 
 /* =====================
-   HEADER
+   [4] HEADER
 ===================== */
 
 #site_header {
@@ -641,7 +652,7 @@ html[lang="en"] #menu-item-36 {
 }
 
 /* =====================
-   FRONTPAGE
+   [5] FRONTPAGE
 ===================== */
 
 #slides {
@@ -913,7 +924,7 @@ html[lang="en"] #menu-item-36 {
 }
 
 /* =====================
-   INDEX
+   [6] INDEX
 ===================== */
 
 .the_posts {
@@ -970,7 +981,7 @@ html[lang="en"] #menu-item-36 {
 }
 
 /* =====================
-   FOOTER
+   [7] FOOTER
 ===================== */
 #site_footer {
     margin-top: 30px;
