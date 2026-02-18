@@ -13,6 +13,7 @@
         ) );
     }
 
+// Site footer
     add_action( 'carbon_fields_register_fields', 'site_footer' );
     function site_footer() {
         Container::make( 'theme_options', 'Site footer' )
