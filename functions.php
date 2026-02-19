@@ -65,13 +65,29 @@
 	
 	add_filter('big_image_size_threshold', fn() => 1920);
 
+// Fecha todos os comentários futuros
+	add_filter('comments_open', '__return_false', 10, 2);
+	add_filter('pings_open', '__return_false', 10, 2);
+
+// Remove o ícone de comentários da barra admin
+	add_action('init', function() {
+		if (is_admin_bar_showing()) {
+			remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+		}
+	});
+
+// Remove menu de comentários do admin
+	add_action('admin_menu', function() {
+		remove_menu_page('edit-comments.php');
+	});
+
+// Mudar o login do wp-login
 	function custom_login_logo() {
 		?>
 			<style>
 				.login h1 a {
 					background-image: url() !important;
 					background-size: contain !important;
-					cursor: default;
 					width: unset !important;
 				}
 			</style>
@@ -79,3 +95,8 @@
 	}
 	add_action('login_enqueue_scripts', 'custom_login_logo');
 
+// Logo aponta para o site frontend
+	add_filter('login_headerurl', fn() => home_url());
+
+// Muda tooltip da logo (opcional)
+	add_filter('login_headertext', fn() => get_bloginfo('name'));
