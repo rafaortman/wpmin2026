@@ -333,6 +333,20 @@ h3 {
 	}
 }
 
+.btn {
+	font-size: 1rem;
+	display: inline-block;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background-color: var(--ciano);
+	text-decoration: none;
+	text-transform: uppercase;
+	&:hover {
+		background-color: var(--cobalto);
+	}
+}
+
 /* =====================
    [4] HEADER
 ===================== */
