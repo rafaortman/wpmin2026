@@ -22,6 +22,16 @@
         ) );
     }
 
+// 404
+    add_action( 'carbon_fields_register_fields', 'erro404' );
+    function erro404() {
+        Container::make( 'theme_options', 'Erro 404' )
+        ->add_fields( array(
+			Field::make( 'text', 'erro404_titulo', 'Título' ),
+            Field::make( 'rich_text', 'erro404_conteudo', 'Mensagem' )
+        ) );
+    }
+
 // Página inicial
     add_action( 'carbon_fields_register_fields', 'home_fields' );
     function home_fields() {
